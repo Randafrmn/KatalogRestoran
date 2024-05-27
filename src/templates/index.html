@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Restaurant Catalogue App">
+  <meta name="theme-color" content="#191A19"/>
+
+  <link rel="apple-touch-icon" href="/icons/icon192x192.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  <title>Zinu Eats</title>
+</head>
+<body>
+    <loader-element></loader-element>
+    <a href="#mainContent" class="skip-content">Skip to Content?</a>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="brand">
+                        <h1>Zinu Eats</h1>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#/restaurant-list">Home</a></li>
+                            <li><a href="#/favorites">Favorite</a></li>
+                            <li><a href="https://www.instagram.com/randafrmn/" target="_blank">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="hamburger">
+                        <button id="hamburger">☰</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav id="drawer" class="nav-bar-mobile">
+        <div class="menu-mobile">
+            <ul>
+                <li><a href="#/restaurant-list">Home</a></li>
+                <li><a href="#/favorites">Favorite</a></li>
+                <li><a href="https://www.instagram.com/randafrmn/" target="_blank">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero-container" style="background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)), url('heros/hero-image_4.jpg');">
+        <div class="hero-content">
+            <h1 class="hero-title">Savor the Flavors at Zinu Eats</h1>
+            <p class="hero-subtitle">A Culinary Experience Like No Other</p>
+        </div>
+    </div>
+    <main id="mainContent"></main>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+      </div>
+    <footer>
+        <div class="container">
+            <div id="footerTools">
+                <button id="subscribePushNotification" class="btn">Subscribe Push Notification</button>
+                <button id="unsubscribePushNotification" class="btn">Unsubscribe Push Notification</button>
+              </div>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>Zinu Eats</h2>
+                    <p>Your gateway to the finest culinary experiences. Discover the best restaurants around you and indulge in a feast like no other.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Favorite</a></li>
+                        <li><a href="https://www.instagram.com/randafrmn/" target="_blank" rel="noopener noreferrer">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><a href="/">randafrmn@gmail.com</a></li>
+                        <li><a href="/">+62 821-5887-4067</a></li>
+                        <li><a href="#">Sungai Raya Dalam, Pontianak</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zinu Eats. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
