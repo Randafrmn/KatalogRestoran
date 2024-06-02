@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && node sharp.js",
+    "build-image": "node sharp.js",
     "serve": "http-server dist --port 9000",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js",
-    "build-all": "npm run build && npm run build-image"
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "",
