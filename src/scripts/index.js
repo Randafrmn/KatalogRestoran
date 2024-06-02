@@ -9,6 +9,11 @@ import WebSocketInitiator from './utils/websocket-initiator';
 import FooterToolsInitiator from './utils/footer-tools-initiator';
 import './utils/loader-element';
 import CONFIG from './globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
+const START = 10;
+const NUMBER_OF_IMAGES = 100;
 
 const app = new App({
   button: document.querySelector('#hamburger'),

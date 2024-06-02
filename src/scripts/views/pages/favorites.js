@@ -23,6 +23,13 @@ const Favorites = {
         restaurantContainer.innerHTML += createRestaurantsListTemplate(restaurant);
       });
     }
+
+    setTimeout(() => {
+      const skeletonElements = restaurantContainer.querySelectorAll('.skeleton');
+      skeletonElements.forEach((element) => {
+        element.classList.remove('skeleton');
+      });
+    }, 500);
   },
 };
 

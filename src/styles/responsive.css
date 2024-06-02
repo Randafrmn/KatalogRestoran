@@ -78,7 +78,7 @@
     }
 
     .hero-container {
-        min-height: 400px;
+        min-height: 300px;
     }
 
     .section-title {
@@ -227,6 +227,10 @@
         display: none;
     }
 
+    .hero-container {
+        min-height: 400px; /* Sesuaikan dengan tinggi gambar yang digunakan */
+      }
+
     #hamburger {
         background: none;
         border: none;
@@ -339,7 +343,7 @@
         padding-left: 10px;
         min-width: 44px;
         min-height: 44px;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .btn {

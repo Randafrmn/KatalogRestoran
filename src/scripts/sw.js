@@ -1,6 +1,48 @@
 import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 
 precacheAndRoute(self.__WB_MANIFEST);
+
+registerRoute(
+  ({ url }) => url.pathname === '/list',
+  new StaleWhileRevalidate({
+    cacheName: 'restaurant-list-api',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 24 * 60 * 60,
+      }),
+    ],
+  }),
+);
+
+registerRoute(
+  ({ url }) => url.pathname.startsWith('/detail/'),
+  new CacheFirst({
+    cacheName: 'restaurant-detail-api',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 50,
+        maxAgeSeconds: 7 * 24 * 60 * 60,
+      }),
+    ],
+  }),
+);
+
+registerRoute(
+  ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
+  new StaleWhileRevalidate({
+    cacheName: 'restaurant-image-api',
+  }),
+);
 
 self.addEventListener('install', () => {
   console.log('Service Worker: Installed');
