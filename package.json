@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "build-all": "npm run build && npm run build-image"
   },
   "keywords": [],
   "author": "",
