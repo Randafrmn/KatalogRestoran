@@ -38,7 +38,7 @@ registerRoute(
 );
 
 registerRoute(
-  ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
+  ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/small/'),
   new StaleWhileRevalidate({
     cacheName: 'restaurant-image-api',
   }),
